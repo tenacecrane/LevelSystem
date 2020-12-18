@@ -23,18 +23,17 @@ public class LevelingSystem {
 
 	public void addXP(int amount) {
 		this.currentXP += amount;
+		levelUp();
 	}
 
 	public void levelUp() {
-		currentLevel = checkLevel(currentXP);
+		while (currentXP > xpNeeded(currentLevel + 1)) {
+			currentLevel++;
+		}
 	}
 
 	public int xpNeeded(int level) {
 		return (int) (baseXP * (Math.pow(level, levelingSpeed)));
-	}
-
-	private int checkLevel(int xp) {
-		return 0;
 	}
 
 }
