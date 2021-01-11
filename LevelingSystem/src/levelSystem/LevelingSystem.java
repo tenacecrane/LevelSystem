@@ -28,7 +28,7 @@ public class LevelingSystem {
 	}
 
 	public void addXP(int amount) {
-		this.currentXP += amount;
+		currentXP += amount;
 		levelUp();
 	}
 
