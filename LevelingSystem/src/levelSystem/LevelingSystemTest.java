@@ -30,6 +30,7 @@ class LevelingSystemTest {
 		Woodcutting.addXP(10000);
 		assertTrue(Woodcutting.getCurrentLevel() > 1);
 		assertEquals(4, Woodcutting.getCurrentLevel());
+		assertEquals(3, Woodcutting.getCurrentPerkPoints());
 	}
 
 	@Test
